@@ -206,7 +206,7 @@ for (dyad_name in names(ALL_DYADS)) {
   # Ensure the first column is named "Period" (for consistency)
   colnames(df)[1] <- "Period"
   
-  # FILTER THE PERIOD VALUES TO BE BETWEEN 2 AND 50
+  # FILTER THE PERIOD VALUES TO BE BETWEEN 2 AND 50 ( bounding it at .50 -.02 Hz)
   df_filtered <- df[df$Period > 2 & df$Period < 50, ]
   
   # COMPUTE POWER MEANS, SKIPPING THE PERIOD COLUMN
